@@ -1,17 +1,18 @@
 import React, {useState} from 'react';
-import {View, Dimensions, StatusBar} from 'react-native';
+import {ScrollView, Dimensions, StatusBar} from 'react-native';
 import Header from './android/app/src/components/fragments/Header';
 import Select from './android/app/src/components/fragments/Select';
 import Middle from './android/app/src/components/fragments/Middle';
 import Hourly from './android/app/src/components/fragments/Hourly';
+import Daily from './android/app/src/components/fragments/Daily';
+import Rain from './android/app/src/components/fragments/Rain';
+import Sun from './android/app/src/components/fragments/Sun';
 
 const {height} = Dimensions.get('window');
 
 function App(): React.JSX.Element {
-  const [active, setActive] = useState('today');
-
   return (
-    <View
+    <ScrollView
       style={{
         flexDirection: 'column',
         height: height,
@@ -27,7 +28,10 @@ function App(): React.JSX.Element {
       <Select />
       <Middle />
       <Hourly />
-    </View>
+      <Daily />
+      <Rain />
+      <Sun />
+    </ScrollView>
   );
 }
 
