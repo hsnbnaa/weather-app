@@ -1,12 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {ScrollView, Dimensions, StatusBar} from 'react-native';
 import Header from './android/app/src/components/fragments/Header';
-import Select from './android/app/src/components/fragments/Select';
-import Middle from './android/app/src/components/fragments/Middle';
-import Hourly from './android/app/src/components/fragments/Hourly';
-import Daily from './android/app/src/components/fragments/Daily';
-import Rain from './android/app/src/components/fragments/Rain';
-import Sun from './android/app/src/components/fragments/Sun';
+import SelectedDay from './android/app/src/components/layout/SelectedDay';
 
 const {height} = Dimensions.get('window');
 
@@ -25,12 +20,7 @@ function App(): React.JSX.Element {
         translucent
       />
       <Header />
-      <Select />
-      <Middle />
-      <Hourly />
-      <Daily />
-      <Rain />
-      <Sun />
+      <SelectedDay />
     </ScrollView>
   );
 }
